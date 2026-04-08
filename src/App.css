@@ -1,0 +1,574 @@
+.tracker-shell {
+  width: min(1550px, 100% - 2rem);
+  margin: 1.3rem auto;
+}
+
+.tracker-app {
+  border-radius: 16px;
+  background: #f2f4fb;
+  border: 1px solid #dbe0f1;
+  box-shadow: 0 18px 36px rgba(41, 57, 99, 0.14);
+  overflow: hidden;
+}
+
+.tracker-header {
+  padding: 1.6rem 2rem 1.5rem;
+  background: #f6f8ff;
+  border-bottom: 1px solid #e0e5f3;
+}
+
+.tracker-title {
+  margin: 0;
+  color: #111a36;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.tracker-subtitle {
+  margin: 0.45rem 0 0;
+  color: #64709a;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+
+.tracker-tabs {
+  margin-top: 1.3rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tracker-tab {
+  border: 1px solid #dce3f5;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1d284a;
+  font-weight: 700;
+  font-size: 1.08rem;
+  padding: 0.62rem 1.35rem;
+  transition: all 0.18s ease;
+}
+
+.tracker-tab:hover {
+  border-color: #adc0f5;
+  background: #f4f7ff;
+}
+
+.tracker-tab.active {
+  border-color: #adc0f5;
+  background: linear-gradient(145deg, #e2e8fb, #d4def9);
+  color: #2d44a9;
+  box-shadow: 0 8px 14px rgba(70, 97, 191, 0.18);
+}
+
+.tracker-content {
+  padding: 1.65rem;
+  background: linear-gradient(180deg, #e8ecf8, #ebeff9);
+}
+
+.tracker-panel {
+  border-radius: 18px;
+  background: #f9fbff;
+  border: 1px solid #dde4f7;
+  padding: 2rem;
+}
+
+.events-panel {
+  padding-bottom: 1rem;
+}
+
+.attendees-panel {
+  padding-bottom: 1rem;
+}
+
+.venues-panel {
+  padding-bottom: 1rem;
+}
+
+.tickets-panel {
+  padding-bottom: 1rem;
+}
+
+.tracker-tab-panel {
+  padding-bottom: 1rem;
+}
+
+.tracker-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tracker-panel-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tracker-panel-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4e68cf;
+  font-size: 1.8rem;
+  background: #dfe6fb;
+}
+
+.tracker-panel-title {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1;
+  color: #121a35;
+}
+
+.tracker-panel-description {
+  margin: 0.5rem 0 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #5d6893;
+  max-width: 44rem;
+}
+
+.tracker-primary-btn {
+  background: linear-gradient(145deg, #3e59ce, #3b4fc0);
+  border: 1px solid #3c54c7;
+  color: #fff;
+  border-radius: 18px;
+  min-width: 260px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.75rem 1.6rem;
+}
+
+.tracker-primary-btn:hover {
+  color: #fff;
+  background: linear-gradient(145deg, #334bb4, #3345a8);
+}
+
+.tracker-empty-state {
+  margin-top: 1.4rem;
+  border-radius: 18px;
+  border: 1px solid #e2e8fa;
+  background: #f5f8ff;
+  padding: 1.7rem;
+  min-height: 190px;
+}
+
+.tracker-empty-state h3 {
+  margin: 0;
+  color: #212c4b;
+  font-size: 2rem;
+}
+
+.tracker-empty-state p {
+  margin: 1rem 0 0;
+  color: #60709d;
+  font-size: 1.1rem;
+}
+
+.events-table {
+  margin-top: 1.25rem;
+  border: 1px solid #dde4f7;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.events-table thead th {
+  border: none;
+  background: #e7ebf7;
+  color: #4f5e8a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.9rem 1rem;
+}
+
+.events-table tbody td {
+  border-color: #e6ebf8;
+  color: #1f2a4c;
+  font-size: 1.05rem;
+  padding: 0.95rem 1rem;
+}
+
+.attendees-table {
+  margin-top: 1.25rem;
+  border: 1px solid #dde4f7;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.attendees-table thead th {
+  border: none;
+  background: #e7ebf7;
+  color: #4f5e8a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.9rem 1rem;
+}
+
+.attendees-table tbody td {
+  border-color: #e6ebf8;
+  color: #1f2a4c;
+  font-size: 1.05rem;
+  padding: 0.95rem 1rem;
+}
+
+.venues-table {
+  margin-top: 1.25rem;
+  border: 1px solid #dde4f7;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.venues-table thead th {
+  border: none;
+  background: #e7ebf7;
+  color: #4f5e8a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.9rem 1rem;
+}
+
+.venues-table tbody td {
+  border-color: #e6ebf8;
+  color: #1f2a4c;
+  font-size: 1.05rem;
+  padding: 0.95rem 1rem;
+}
+
+.tickets-table {
+  margin-top: 1.25rem;
+  border: 1px solid #dde4f7;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tickets-table thead th {
+  border: none;
+  background: #e7ebf7;
+  color: #4f5e8a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.9rem 1rem;
+}
+
+.tickets-table tbody td {
+  border-color: #e6ebf8;
+  color: #1f2a4c;
+  font-size: 1.05rem;
+  padding: 0.95rem 1rem;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.status-pill-issued {
+  background: #fff2be;
+  color: #8f6b00;
+}
+
+.status-pill-paid {
+  background: #d7f4d8;
+  color: #2f7d36;
+}
+
+.status-pill-cancelled {
+  background: #f1f2f6;
+  color: #5c6273;
+}
+
+.tracker-search {
+  margin-bottom: 1.2rem;
+}
+
+.tracker-search .input-group-text {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.tracker-search .form-control {
+  border-left: none;
+  border-right: none;
+}
+
+.tracker-search .btn {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.tracker-table {
+  border: 1px solid #dde4f7;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.tracker-table thead th {
+  border: none;
+  background: #e7ebf7;
+  color: #4f5e8a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 0.9rem 1rem;
+}
+
+.tracker-table tbody td {
+  border-color: #e6ebf8;
+  color: #1f2a4c;
+  font-size: 1.05rem;
+  padding: 0.95rem 1rem;
+}
+
+.tracker-action-btn {
+  min-width: 126px;
+  font-weight: 700;
+}
+
+.events-description-cell {
+  min-width: 280px;
+  color: #5f6b94;
+}
+
+.events-stat-pill {
+  min-width: 34px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #e1e8fd;
+  color: #4562bf;
+  font-weight: 700;
+}
+
+.events-action-btn {
+  min-width: 68px;
+  font-weight: 600;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 20, 38, 0.72);
+  z-index: 1040;
+}
+
+.modal-dialog-wrapper {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  z-index: 1050;
+}
+
+.event-modal {
+  width: min(1160px, 100%);
+  border-radius: 18px;
+  border: 1px solid #dbe2f6;
+  background-color: #ffffff;
+  background-image: none;
+  box-shadow: 0 25px 55px rgba(20, 31, 60, 0.24);
+}
+
+.event-modal-header {
+  border-bottom: 1px solid #e3e8f7;
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.event-modal-header .modal-title {
+  font-size: 2rem;
+  color: #1a2448;
+}
+
+.event-label {
+  font-weight: 700;
+  color: #3f507f;
+  font-size: 1.05rem;
+}
+
+.event-venue-picker {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+}
+
+.event-modal-footer {
+  border-top: 1px solid #e3e8f7;
+  background-color: #ffffff;
+  background-image: none;
+  gap: 0.85rem;
+}
+
+.event-modal .modal-body {
+  background-color: #ffffff;
+  background-image: none;
+}
+
+.confirm-delete-modal {
+  width: min(560px, 100%);
+}
+
+.attendee-modal {
+  width: min(560px, 100%);
+}
+
+.venue-form-modal {
+  width: min(560px, 100%);
+}
+
+.ticket-form-modal {
+  width: min(1120px, 100%);
+}
+
+.ticket-payment-modal {
+  width: min(980px, 100%);
+}
+
+.ticket-capacity-note {
+  color: #68759a;
+  font-size: 1.1rem;
+}
+
+.attendee-cancel-btn {
+  min-width: 124px;
+}
+
+.attendee-modal-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.attendee-modal-footer .tracker-primary-btn {
+  width: 100%;
+}
+
+.venue-modal {
+  width: min(960px, 100%);
+}
+
+.tracker-footer {
+  border-top: 1px solid #e0e6f7;
+  background: #f7f9ff;
+  color: #6a7495;
+  padding: 0.9rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 991px) {
+  .tracker-shell {
+    width: calc(100% - 1rem);
+    margin: 0.5rem auto;
+  }
+
+  .tracker-header {
+    padding: 1rem;
+  }
+
+  .tracker-content {
+    padding: 0.9rem;
+  }
+
+  .tracker-panel {
+    padding: 1rem;
+  }
+
+  .events-table {
+    margin-top: 1rem;
+  }
+
+  .attendees-table {
+    margin-top: 1rem;
+  }
+
+  .venues-table {
+    margin-top: 1rem;
+  }
+
+  .tickets-table {
+    margin-top: 1rem;
+  }
+
+  .tracker-table {
+    margin-top: 0;
+  }
+
+  .events-table thead th,
+  .events-table tbody td,
+  .attendees-table thead th,
+  .attendees-table tbody td,
+  .venues-table thead th,
+  .venues-table tbody td,
+  .tickets-table thead th,
+  .tickets-table tbody td,
+  .tracker-table thead th,
+  .tracker-table tbody td {
+    font-size: 0.93rem;
+    padding: 0.65rem 0.55rem;
+  }
+
+  .tracker-action-btn {
+    min-width: 102px;
+  }
+
+  .events-description-cell {
+    min-width: 180px;
+  }
+
+  .tracker-panel-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tracker-primary-btn {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .event-venue-picker {
+    grid-template-columns: 1fr;
+  }
+
+  .event-modal-header .modal-title {
+    font-size: 1.5rem;
+  }
+
+  .tracker-panel-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+
+  .tracker-empty-state {
+    min-height: 140px;
+    padding: 1rem;
+  }
+
+  .tracker-empty-state h3 {
+    font-size: 1.6rem;
+  }
+}
