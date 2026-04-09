@@ -1,3 +1,5 @@
+// This file defines the types and constants related to the Tracker feature of the application.
+
 export type TrackerTabKey =
   | 'events'
   | 'attendees'
